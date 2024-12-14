@@ -1,16 +1,15 @@
 function initMap() {
-    let francisco = {lat: 37.77558376845853, lng: -122.42146859438208}
-    let map = new google.maps.Map(
-        document.getElementById('map'),
-        {
-            zoom: 15,
-            center: francisco,
-            mapId: 'map'
-        }
-    )
-    let marker = new AdvancedMarkerElemen({
-        position: francisco,
+    // Create a map centered at a specific location
+    const location = { lat: 28.6139, lng: 77.2090 }; // Latitude and longitude (example: Delhi, India)
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: location,
+        zoom: 10, // Zoom level
+    });
+
+    // Add a marker at the location
+    const marker = new google.maps.Marker({
+        position: location,
         map: map,
-        title: 'Francisco'
-    })
+    });
 }
